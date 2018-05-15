@@ -1,4 +1,4 @@
-== Content Crawler
+# Content Crawler
 
 Content Crawler is website which allow user to see inner html content which resides in various html tags.
 
@@ -9,15 +9,15 @@ As of now we are fetching and storing following html tags information:
  *h3
  *a links
 
-API End Point 1 (enter any website URL)
+## API End Point 1 (enter any website URL)
 
-Request:
+### Request:
 
 ```bash
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"website-urls", "attributes":{"url":"https://www.facebook.com"}}}' http://localhost:3000/website-urls
 ```
 
-Response:
+### Response:
 
 ```
 HTTP/1.1 201 Created 
@@ -38,17 +38,17 @@ Connection: Keep-Alive
 {"data":{"id":"16","type":"website-urls","links":{"self":"http://localhost:3000/website-urls/16"},"attributes":{"url":"https://www.facebook.com"},"relationships":{"website-url":{"links":{"self":"http://localhost:3000/website-urls/16/relationships/website-url","related":"http://localhost:3000/website-urls/16/website-url"}}}}}
 ```
 
-Note: url is required field here. 
+#### Note: url is required field here. 
 
-API End Point 2 (for showing previously stored urls and information)
+## API End Point 2 (for showing previously stored urls and information)
 
-Request: 
+### Request: 
 
 ```bash
 curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/website-contents"
 ```
 
-Response: 
+### Response: 
 
 ```
 HTTP/1.1 200 OK 
