@@ -12,12 +12,14 @@ As of now we are fetching and storing following html tags information:
 API End Point 1 (enter any website URL)
 
 Request:
+
 ```bash
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"website-urls", "attributes":{"url":"https://www.facebook.com"}}}' http://localhost:3000/website-urls
 ```
 
 Response:
-```bash
+
+```
 HTTP/1.1 201 Created 
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
@@ -41,12 +43,14 @@ Note: url is required field here.
 API End Point 2 (for showing previously stored urls and information)
 
 Request: 
+
 ```bash
 curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/website-contents"
 ```
 
 Response: 
-```bash
+
+```
 HTTP/1.1 200 OK 
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
