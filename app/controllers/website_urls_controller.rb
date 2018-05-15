@@ -1,0 +1,2 @@
+class WebsiteUrlsController < ApplicationController
+end
