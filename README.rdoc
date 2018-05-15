@@ -13,13 +13,13 @@ API End Point 1 (enter any website URL)
 
 Request:
 
-```
+```ruby
 curl -i -H "Accept: application/vnd.api+json" -H 'Content-Type:application/vnd.api+json' -X POST -d '{"data": {"type":"website-urls", "attributes":{"url":"https://www.facebook.com"}}}' http://localhost:3000/website-urls
 ```
 
 Response:
 
-```
+```ruby
 HTTP/1.1 201 Created 
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
@@ -44,11 +44,13 @@ API End Point 2 (for showing previously stored urls and information)
 
 Request: 
 
-```curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/website-contents"```
+```ruby
+curl -i -H "Accept: application/vnd.api+json" "http://localhost:3000/website-contents"
+```
 
 Response: 
 
-```
+```ruby
 HTTP/1.1 200 OK 
 X-Frame-Options: SAMEORIGIN
 X-Xss-Protection: 1; mode=block
